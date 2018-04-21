@@ -1,0 +1,43 @@
+.overlay { /* Cadre du texte */ 
+    text-align: center;
+    position: relative;
+    top: 90px;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin: 190px; /* Marge extérieure */ 
+    margin-bottom: 0px; 
+    width: auto; 
+    border-radius: 30px; /* Coins du cadre arrondis */ 
+    height: auto;
+    padding-bottom: 1px; /* Marge intérieure */ 
+}
+    
+.question { /* Background */ 
+    width: 100%; 
+    height: 100%; 
+    background-size: cover; 
+    background-position: bottom; 
+    background-image: url(index.jpg); 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+}
+
+.question button { /* Code pour le boutton */ 
+    width: 100%; 
+    height: 500px; 
+    opacity: 0; 
+} 
+
+.question button:hover { /* Quand la souris est sur le boutton */ 
+    cursor: pointer; /* Le curseur devient une main */ 
+} 
+
+h1 { 
+  font-size: 25px; 
+  color: #5F4444; 
+  font-family: Comic sans MS, Comic Sans, cursive; 
+} 
+
+body { 
+    overflow: hidden; /* Permet d'enlever ce qui fait descendre la page */ 
+}
