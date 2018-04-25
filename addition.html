@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+        <link rel="stylesheet" href="main.css" />
+		<title>Enigme</title>
+	</head>
+
+	<body>
+        <section class="question">
+            <div class="overlay">
+                <img scr="image/nanachi.png" alt="Nanachi" />
+                <div class="text">
+                    <p>Vous marchez et rencontrez quelqu'un sur votre chemin.</p>
+                    <p>"Si tu réponds bien à mon énigme, je t'accompagnerai le long de ton parcours !"</p>
+                    <p>"Monique aime collectionner les petits animaux en peluche. Elle a <strong id="v1"></strong> chiens et <strong id="v2"></strong> canards. Combien d'animaux en peluche a-t-elle dans sa collection ?"</p>
+                </div>
+                <form id="form" onsubmit="return false;">
+                        <input type="number" name="result" id="result" autofocus />
+                        <input type="submit" />
+                </form> 
+                <script src="js/addition.js"></script>
+            </div>
+        </section>
+	</body>
+</html>

@@ -1,4 +1,6 @@
-.overlay { /* Cadre du texte */ 
+/* Cadre du texte */ 
+
+.overlay {
     text-align: center;
     position: relative;
     top: 90px;
@@ -11,33 +13,27 @@
     padding-bottom: 1px; /* Marge intérieure */ 
 }
     
-.question { /* Background */ 
+/* Background */ 
+
+.question {
     width: 100%; 
     height: 100%; 
     background-size: cover; 
-    background-position: bottom; 
-    background-image: url(index.jpg); 
+    background-position: bottom;
+    background-image: url(index.jpg);
     position: absolute; 
     top: 0; 
     left: 0; 
 }
 
-.question button { /* Code pour le boutton */ 
-    width: 100%; 
-    height: 500px; 
-    opacity: 0; 
-} 
+/* Texte */
 
-.question button:hover { /* Quand la souris est sur le boutton */ 
-    cursor: pointer; /* Le curseur devient une main */ 
-} 
-
-h1 { 
+.text { 
   font-size: 25px; 
   color: #5F4444; 
   font-family: Comic sans MS, Comic Sans, cursive; 
 } 
 
 body { 
-    overflow: hidden; /* Permet d'enlever ce qui fait descendre la page */ 
+    overflow: hidden; /* Permet d'enlever la barre de scroll */ 
 }
