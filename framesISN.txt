@@ -16,7 +16,9 @@ HTML
 
 CSS
 	main.css //Definit le style global
-		Olivia
+		Alison && Olivia
+    index.css //Style pour index.html
+        Olivia
 
 JS
 	addition.js //Teste la reponse de l'utilisateur rentree dans le formulaire grave a un eventlistener

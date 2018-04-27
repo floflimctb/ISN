@@ -1,0 +1,12 @@
+/* Background */ 
+
+body {
+    width: 100%; 
+    height: 100%; 
+    background-size: cover; 
+    background-position: bottom;
+    background-image: url(../images/addition.jpg);
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+}
