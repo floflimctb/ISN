@@ -79,6 +79,7 @@ function mousePressed () {
         else {
             mot.active = false; //Sinon, il ne l'est pas
         }
+        return false;
     }
 }
 
@@ -90,5 +91,6 @@ function mouseDragged () {
             mot.y = mouseY; //Et idem pour y
             break; //Pour sortir de la boucle
         }
+        return false;
     }
 }
