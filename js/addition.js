@@ -11,7 +11,7 @@ function changeDescription () {
     }
 }
 
-function RedirectionJavascript () {
+function redirection () {
 	document.location.href = 'chemins.html'; 
 }
 
@@ -23,7 +23,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
     var result = numbers[0] + numbers[1]; 
     
     if (value == result) {
-        RedirectionJavascript(); 
+        redirection(); 
     }
     else {
         alert("Mauvaise reponse");

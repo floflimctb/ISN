@@ -73,6 +73,10 @@ function mouseDragged () {
     }
 }
 
-function mouseReleased(){
+function mouseReleased () {
     word = null;
+}
+
+function redirection () {
+	document.
 }
