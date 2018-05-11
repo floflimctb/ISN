@@ -1,4 +1,4 @@
-var Mot = { //Définit un objet mot prototype
+var Mot = { //Définit un objet prototype mot
     init: function (mot, x) { //Cet objet a pour propriété une initialisation avec :
         this.mot = mot; //Un mot que l'on pourra rentrer
         this.x = x; //Une valeur en x que l'on pourra renseigner également
@@ -87,13 +87,6 @@ function redirection () {
 }
 
 function sent () {
-    //var testAll = false;
-    
-    //var testAll;
-    
-    /*testAll = (allInBox() ? true : false);
-    ((testAll === true) ? redirection() : alert("Place tous les mots dans les boîtes pour valider") );*/
-    
     var testAll = allInBox();
     
     if (testAll === true) {
@@ -107,29 +100,20 @@ function sent () {
 function allInBox() {
     for (var i = 0; i < mots.length; i++) {
         var mot = mots[i];
-        var test = false;
+        var test = true;
 
-        if (inBox(mot.x, mot.x + 100, mot.y, mot.y + 30) === true) {
-            test = true;
-        else {
-            test = false;
+        for (var j = 0; j < boxes.length; i++) {
+            var box = boxes[j];
+
+            if ((mot.x > box.x) && (mot.x + 100 < box.x + 110) && (mot.y > box.y) && (mot.y + 30 < box.y + 40)) {
+                test = true;
+            }
+            else {
+                test = false;
+            }
         }
-        //test = ((inBox(mot.x, mot.x + 100, mot.y, mot.y + 30)) ? true : false);
 	}
     return ((test === true) ? true : false);
-}
-
-function inBox (a, b, c, d) {
-    for (var i = 0; i < boxes.length; i++) {
-        var box = boxes[i];
-        
-        if ((a > box.x) && (b < box.x + 110) && (c > box.y) && (d < box.y + 40)) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
 }
     
 /*function ordre () {
