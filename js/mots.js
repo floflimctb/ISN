@@ -33,6 +33,8 @@ for (var i = 0; i < 6; i++) {
     boxes[i].init(mots[i].x, 220);
 }
 
+var button;
+
 function setup () {
     createCanvas(740, 400); //Crée une zone canvas dans laquelle on pourra travailler de longueur 710 et de largeur 400
     background(255); //Le background de cette zone de canvas est blanc
@@ -52,6 +54,9 @@ function draw () {
         rect(mot.x - 5, mot.y - 5, 100, 30); //Rectangle correspondant à la délimitation de la boîte de texte
         rect(box.x, box.y, 110, 40);
     }
+    button = createButton('Envoyer');
+    button.position(20, 390);
+    button.mousePressed(sent);
 }
 
 var word = null;
@@ -78,5 +83,56 @@ function mouseReleased () {
 }
 
 function redirection () {
-	document.
+	document.location.href = '../html/succeed.html'; 
 }
+
+function sent () {
+    //var testAll = false;
+    
+    //var testAll;
+    
+    /*testAll = (allInBox() ? true : false);
+    ((testAll === true) ? redirection() : alert("Place tous les mots dans les boîtes pour valider") );*/
+    
+    var testAll = allInBox();
+    
+    if (testAll === true) {
+        redirection();
+    }
+    else {
+        alert("Erreur");
+    }
+}
+
+function allInBox() {
+	for (var i = 0; i < mots.length; i++) {
+		var mot = mots[i];
+        var test = false;
+
+        if (inBox(mot.x, mot.x + 100, mot.y, mot.y + 30) === true) {
+            test = true;
+        }
+        else {
+            test = false;
+        }
+        //test = ((inBox(mot.x, mot.x + 100, mot.y, mot.y + 30)) ? true : false);
+	}
+    return ((test === true) ? true : false);
+}
+
+function inBox (a, b, c, d) {
+    for (var i = 0; i < boxes.length; i++) {
+        var box = boxes[i];
+        
+        if ((a > box.x) && (b < box.x + 110) && (c > box.y) && (d < box.y + 40)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+}
+    
+/*function ordre () {
+    
+}*/

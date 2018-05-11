@@ -12,7 +12,7 @@ function changeDescription () {
 }
 
 function redirection () {
-	document.location.href = 'chemins.html'; 
+	document.location.href = '../html/chemins.html'; 
 }
 
 changeDescription(); 
