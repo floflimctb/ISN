@@ -87,9 +87,7 @@ function redirection () {
 }
 
 function sent () {
-    var testAll = allInBox();
-    
-    if (testAll === true) {
+    if (allInBox()) {
         redirection();
     }
     else {
@@ -102,20 +100,22 @@ function allInBox() {
         var mot = mots[i];
         var test = true;
 
-        for (var j = 0; j < boxes.length; i++) {
-            var box = boxes[j];
-
-            if ((mot.x > box.x) && (mot.x + 100 < box.x + 110) && (mot.y > box.y) && (mot.y + 30 < box.y + 40)) {
-                test = true;
-            }
-            else {
-                test = false;
-            }
+        if (inBox(mot.x, mot.y)) {
+            test = true;
+        }
+        else {
+            test = false;
         }
 	}
     return ((test === true) ? true : false);
 }
-    
-/*function ordre () {
-    
-}*/
+
+function inBox (x, y) {
+    for (var j = 0; j < boxes.length; j++) {
+        var box = boxes[j];
+
+        if ((x > box.x) && (x + 100 < box.x + 110) && (y > box.y) && (y + 30 < box.y + 40)) {
+            return true;
+        }
+    }
+}
