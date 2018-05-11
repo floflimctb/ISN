@@ -99,8 +99,9 @@ function allInBox() {
     for (var i = 0; i < mots.length; i++) {
         var mot = mots[i];
         var test = true;
+        var testBox = inBox(mot.x, mot.y);
 
-        if (inBox(mot.x, mot.y)) {
+        if (inBox[0] === true) {
             test = true;
         }
         else {
@@ -115,7 +116,7 @@ function inBox (x, y) {
         var box = boxes[j];
 
         if ((x > box.x) && (x + 100 < box.x + 110) && (y > box.y) && (y + 30 < box.y + 40)) {
-            return true;
+            return [true, j];
         }
     }
 }
