@@ -111,12 +111,11 @@ function allInBox() {
 
         if (inBox(mot.x, mot.x + 100, mot.y, mot.y + 30) === true) {
             test = true;
-        }
         else {
             test = false;
         }
         //test = ((inBox(mot.x, mot.x + 100, mot.y, mot.y + 30)) ? true : false);
-    }
+	}
     return ((test === true) ? true : false);
 }
 

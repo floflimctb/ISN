@@ -11,8 +11,8 @@ function changeDescription () {
     }
 }
 
-function RedirectionJavascript () {
-	document.location.href = 'chemins.html'; 
+function redirection () {
+	document.location.href = '../html/chemins.html'; 
 }
 
 changeDescription(); 
@@ -23,7 +23,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
     var result = numbers[0] + numbers[1]; 
     
     if (value == result) {
-        RedirectionJavascript(); 
+        redirection(); 
     }
     else {
         alert("Mauvaise reponse");
