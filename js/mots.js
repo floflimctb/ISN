@@ -114,9 +114,12 @@ function allInBox() {
 function inBox (x, y) {
     for (var j = 0; j < boxes.length; j++) {
         var box = boxes[j];
+        var result = [false];
 
         if ((x > box.x) && (x + 100 < box.x + 110) && (y > box.y) && (y + 30 < box.y + 40)) {
-            return [true, j];
+            result[0] = true;
+            result.push(j);
         }
     }
+    return result;
 }
