@@ -6,9 +6,16 @@
 		<title>Enigme</title>
 	</head>
 
-	<body>
-        <div class="text">
-            <p>Bravo ! <strong>Nom du premier personnage</strong> va maintenant vous venir en aide.</p>
-        </div>
+	<body style="background-image:url('../images/chemins.jpg');" onLoad="document.onkeypress = reactKey();">
+        <section class="question">
+            <img src='../images/page2.jpg' />
+            <div class="texte" style="top: 0px;" >
+                <p>Bravo ! <strong>Nom du premier personnage</strong> va maintenant vous venir en aide.</p>
+                <p>Tu as maintenant le choix : Quel chemin veux-tu prendre ?</p>
+                <p>Tu peux appuyer sur la touche gauche de ton clavier pour aller à gauche et sur la touche droite pour aller à droite.</p>
+            </div>
+
+            <script src="../js/chemins.js"></script>
+        </section>
 	</body>
 </html>

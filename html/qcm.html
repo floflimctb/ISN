@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>qcm</title>
+        <meta charset="utf-8"/>        
+        <link href="../css/qcm.css" rel="stylesheet" type="text/css" />
+        <link href="../css/main.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <section class="question">
+            <img src="../images/qcm.jpg" alt="mouton"/>
+            <div class="texte" style="top: 0px;">
+                <p>Ce matin, mon fils a retrouvé l'enclos de nos 24 loups ouvert. J'ai dû oublier de vérifier deux fois la fermeture de l'enclos hier soir. D'après mon fils, tous mes loups se sont enfuis, sauf 9. Combien dois-je en trouver ?</p>
+                
+                <form name="QCM">
+                    <article>
+                        <h3>Question</h3>
+                        <input type="radio" name="choix" value="choix1"/>24<br/>                        
+                        <input type="radio" name="choix" value="choix2"/>9<br/>
+                        <input type="radio" name="choix" value="choix3"/>33<br/>
+                        <input type="radio" name="choix" value="choix4"/>15<br/>
+                    </article>
+                    <br />
+                    <input type="button" value="Valider" onclick="tester(this.form.choix)"/> 
+                </form>
+                
+                <script src="../js/qcm.js"></script>
+            </div>
+        </section>
+    </body>
+</html>

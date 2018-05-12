@@ -1,0 +1,9 @@
+body { /* Code pour le background */ 
+    background-image: url('../images/qcm.jpg');
+}
+
+img {
+    height: 350px; 
+    margin-top: 60px; 
+    margin-bottom: 40px;
+}

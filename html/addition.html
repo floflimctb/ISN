@@ -7,19 +7,20 @@
 		<title>Enigme</title>
 	</head>
 
-	<body>
+	<body style="background-image: url(../images/addition.jpg);">
         <section class="question">
-            <div class="overlay">
-                <img src="../images/nanachi.png" alt="Nanachi" />
-                <div class="text">
-                    <p>Vous marchez et rencontrez quelqu'un sur votre chemin.</p>
-                    <p>"Si tu réponds bien à mon énigme, je t'accompagnerai le long de ton parcours !"</p>
-                    <p>"Monique aime collectionner les petits animaux en peluche. Elle a <strong id="v1"></strong> chiens et <strong id="v2"></strong> canards. Combien d'animaux en peluche a-t-elle dans sa collection ?"</p>
-                </div>
+            <div id="texte" class="texte" style="top: 10px;">
+                <img src="page3.jpg" alt="rencontre" />
+                
+                <p>Vous marchez et rencontrez quelqu'un sur votre chemin.</p>
+                <p>"Si tu réponds bien à mon énigme, je t'accompagnerai le long de ton parcours !"</p>
+                <p>"Monique aime collectionner les petits animaux en peluche. Elle a <strong id="v1"></strong> chiens et <strong id="v2"></strong> canards. Combien d'animaux en peluche a-t-elle dans sa collection ?"</p>
+                
                 <form id="form" onsubmit="return false;">
-                        <input type="number" name="result" id="result" autofocus />
-                        <input type="submit" />
-                </form> 
+                    <input type="number" name="result" id="result" autofocus />
+                    <input type="submit" />
+                </form>
+                
                 <script src="../js/addition.js"></script>
             </div>
         </section>
