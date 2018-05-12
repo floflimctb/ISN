@@ -1,5 +1,5 @@
 function RedirectionJavascript() {
-	document.location.href = 'fin.html'; 
+	document.location.href = '../html/fin.html'; 
 }
 
 function tester(choix)// une fonction que l'on appellera pour tester le formulaire
