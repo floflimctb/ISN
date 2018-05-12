@@ -20,9 +20,10 @@ body {
     margin: 190px; /* marge extérieure : permet de centrer le cadre (il y a une marge de 190px à droite et à gauche */ 
     margin-top: 0px; 
     margin-bottom: 0px; 
-    width: auto; 
-    height: auto; 
-    padding: 2px; /* marge intérieure */ 
+    width: auto;
+    height: auto;
+    border-radius: 30px; /* pour mettre les coins du cadre arrondis */ 
+    padding: 8px; /* marge intérieure */ 
 }
 
 img {
