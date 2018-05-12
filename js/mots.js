@@ -89,14 +89,15 @@ function redirection () {
 function sent () {
     var testErreur = allInBox();
     var ordre = testErreur[1];
-    var result = inOrder(ordre);
     
     if (testErreur[0] === true) {
+    	var result = inOrder(ordre);
+
         if (result === true) {
             redirection();
         }
         else {
-            alert("Tu t'ai trompé d'ordre, essaie encore !");
+            alert("Tu t'es trompé d'ordre, essaie encore !");
         }
     }
     else {
@@ -119,9 +120,11 @@ function allInBox() {
         }
         else {
             test = false;
+            break;
         }
 	}
     result.push(test);
+
     if (test === true) {
         result[0] = true;
         result.push(ordres);
