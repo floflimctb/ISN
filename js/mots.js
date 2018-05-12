@@ -64,7 +64,7 @@ var word = null;
 function mousePressed () {
     for (var i = 0; i < mots.length; i++) {
         var mot = mots[i];
-        if((mouseX > mot.x) && (mouseX < mot.x + 100) && (mouseY > mot.y) && (mouseY < mot.y + 30)){ //Si la souris est dans la boîte du mot
+        if((mouseX > mot.x - 5) && (mouseY > mot.y - 5) && (mouseX < mot.x + 100) && (mouseY < mot.y + 30)){ //Si la souris est dans la boîte du mot
           word = mot;
           break;
         }
@@ -87,28 +87,50 @@ function redirection () {
 }
 
 function sent () {
-    if (allInBox()) {
-        redirection();
+    var testErreur = allInBox();
+    var ordre = testErreur[1];
+    var result = inOrder(ordre);
+    
+    if (testErreur[0] === true) {
+        if (result === true) {
+            redirection();
+        }
+        else {
+            alert("Tu t'ai trompé d'ordre, essaie encore !");
+        }
     }
     else {
-        alert("Erreur");
+        alert("Mets tous les mots dans les rectangles pour valider");
     }
 }
 
 function allInBox() {
+    var test = true;
+    var result = [];
+    var ordres = [];
+    
     for (var i = 0; i < mots.length; i++) {
         var mot = mots[i];
-        var test = true;
         var testBox = inBox(mot.x, mot.y);
 
-        if (inBox[0] === true) {
+        if (testBox[0] === true) {
             test = true;
+            ordres.push(testBox[1]);
         }
         else {
             test = false;
         }
 	}
-    return ((test === true) ? true : false);
+    result.push(test);
+    if (test === true) {
+        result[0] = true;
+        result.push(ordres);
+        return result;
+    }
+    else {
+        result[0] = false;
+        return result;
+    }
 }
 
 function inBox (x, y) {
@@ -116,10 +138,20 @@ function inBox (x, y) {
         var box = boxes[j];
         var result = [false];
 
-        if ((x > box.x) && (x + 100 < box.x + 110) && (y > box.y) && (y + 30 < box.y + 40)) {
+        if ((x - 5 > box.x) && (y - 5 > box.y) && (x + 95 < box.x + 110) && (y + 25 < box.y + 40)) {
             result[0] = true;
             result.push(j);
+            break;
         }
     }
     return result;
+}
+
+function inOrder (ordre) {
+    if ((ordre[0] == 5) && (ordre[1] == 3) && (ordre[2] == 0) && (ordre[3] == 2) && (ordre[4] == 1) && (ordre[5] == 4)) {
+        return true;
+    }
+    else {
+        return false;
+    }
 }
