@@ -83,7 +83,7 @@ function mouseReleased () {
 }
 
 function redirection () {
-    document.location.href = '../html/fin.html'; 
+    document.location.href = '../html/qcm.html'; 
 }
 
 function sent () {
