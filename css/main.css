@@ -1,8 +1,5 @@
 body {
     margin: 0;
-    font-family: Helvetica;
-    color: #800000;
-    background-color: white;
     background-size: cover;
     overflow: hidden; /* Pour enlever le truc qui permet de faire descendre la page */
     width: 100%; 
@@ -18,12 +15,11 @@ body {
     position: relative; 
     background-color: rgba(255, 255, 255, 0.7); /* couleur blanche avec une opacité de 0.7 */ 
     margin: 190px; /* marge extérieure : permet de centrer le cadre (il y a une marge de 190px à droite et à gauche */ 
-    margin-top: 0px; 
+    margin-top: 10px; 
     margin-bottom: 0px; 
-    width: auto;
-    height: auto;
-    border-radius: 30px; /* pour mettre les coins du cadre arrondis */ 
-    padding: 8px; /* marge intérieure */ 
+    width: auto; 
+    height: auto; 
+    padding: 2px; /* marge intérieure */ 
 }
 
 img {
@@ -38,28 +34,53 @@ img {
 }
 
 h1 { 
-    font-size: 25px; 
+    font-size: 30px; 
     color: #5F4444; 
-    font-family: Helvetica; 
+    font-family: Apple Chancery; 
+    font-variant: small-caps; 
+    font-weight: lighter ;
 } 
 
 h2 { 
     color: #5F4444; 
-    font-family: Helvetica; 
+    font-family: Apple Chancery; 
+    font-variant: small-caps; 
+    font-weight: lighter ;
+
+}
+
+h3 {
+    color: #5F4444; 
+    font-family: Apple Chancery; 
+    font-variant: small-caps; 
+    font-weight: lighter ;
+}
+
+a { 
+    color: #5F4444; 
+    font-family: Apple Chancery; 
+    font-variant: small-caps; 
+    font-weight: lighter ;
 }
 
 p { 
-    font-size: 15px; 
+    font-size: 20px; 
     color: #5F4444; 
-    font-family: Helvetica; 
+    font-family: Apple Chancery;    
+    font-variant: small-caps; 
+    font-weight: lighter ;
 }
 
-.question button { /* Code pour le boutton */ 
+.question button { /* Code pour le bouton */ 
     width: 100%; 
     height: 700px; 
     opacity: 0; 
 } 
 
-.question button:hover { /* Quand la souris est sur le boutton */ 
+.question button:hover { /* Quand la souris est sur le bouton */ 
     cursor: pointer; /* Le curseur devient une main */ 
+}
+
+input {
+    border-radius:50px;
 }
