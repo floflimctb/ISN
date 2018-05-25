@@ -1,25 +1,29 @@
+/*Background*/
+
 body {
     margin: 0;
     background-size: cover;
-    overflow: hidden; /* Pour enlever le truc qui permet de faire descendre la page */
+    overflow: hidden;
     width: 100%; 
     height: 100%;
-    background-position: bottom; /* Permet de voir le haut de l'image */ 
+    background-position: bottom;
     position: absolute;
     top: 0; 
     left: 0; 
 }
 
+/*Pour class="texte"*/
+
 .texte {
     text-align: center; 
     position: relative; 
-    background-color: rgba(255, 255, 255, 0.7); /* couleur blanche avec une opacité de 0.7 */ 
-    margin: 190px; /* marge extérieure : permet de centrer le cadre (il y a une marge de 190px à droite et à gauche */ 
+    background-color: rgba(255, 255, 255, 0.7);
+    margin: 190px;
     margin-top: 10px; 
     margin-bottom: 0px; 
     width: auto; 
     height: auto; 
-    padding: 2px; /* marge intérieure */ 
+    padding: 2px;
 }
 
 img {
@@ -33,52 +37,29 @@ img {
     margin-right: auto;  
 }
 
+h1, h2, h3, a, p {
+    color: #5F4444; 
+    font-family: Apple Chancery; 
+    font-variant: small-caps; 
+    font-weight: lighter ;
+}
+
 h1 { 
-    font-size: 30px; 
-    color: #5F4444; 
-    font-family: Apple Chancery; 
-    font-variant: small-caps; 
-    font-weight: lighter ;
-} 
-
-h2 { 
-    color: #5F4444; 
-    font-family: Apple Chancery; 
-    font-variant: small-caps; 
-    font-weight: lighter ;
-
-}
-
-h3 {
-    color: #5F4444; 
-    font-family: Apple Chancery; 
-    font-variant: small-caps; 
-    font-weight: lighter ;
-}
-
-a { 
-    color: #5F4444; 
-    font-family: Apple Chancery; 
-    font-variant: small-caps; 
-    font-weight: lighter ;
+    font-size: 30px;
 }
 
 p { 
-    font-size: 20px; 
-    color: #5F4444; 
-    font-family: Apple Chancery;    
-    font-variant: small-caps; 
-    font-weight: lighter ;
+    font-size: 20px;
 }
 
-.question button { /* Code pour le bouton */ 
+.question button { 
     width: 100%; 
     height: 700px; 
     opacity: 0; 
 } 
 
-.question button:hover { /* Quand la souris est sur le bouton */ 
-    cursor: pointer; /* Le curseur devient une main */ 
+.question button:hover {
+    cursor: pointer;
 }
 
 input {

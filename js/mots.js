@@ -51,24 +51,24 @@ for (var i = 0; i < 6; i++) {
 
 var button; //Variable globale pour faire le bouton de validation
 
-//Fonction propre à p5.js : initialisation de la fenêtre canvas
+/*Fonction propre à p5.js : initialisation de la fenêtre canvas*/
 
 function setup () {
     createCanvas(740, 400);
     background(255);
 }
 
-//Fonction propre à p5.js : "Dessin" des figures
+/*Fonction propre à p5.js : "Dessin" des figures*/
 
 function draw () {
     textSize(20); //Texte qui suit de taille 20
     
     for (var i = 0; i < mots.length ; i++) {
-        var mot = mots[i]; //Question de practicité, cela évite de marquer mots[i] à chaque fois
+        var mot = mots[i]; //Cela évite de marquer mots[i] à chaque fois
         var box = boxes[i];
 
         fill(0); //Figures qui suivent remplies de noir
-        text(mot.mot, mot.x, mot.y, 100, 30); //On écrit une boîte de texte qui prend le point de départ de l'objet du terme du tableau ainsi que la longueur et la largeur définies
+        text(mot.mot, mot.x, mot.y, 100, 30); //Boîte de texte qui prend le point de départ de l'objet du terme du tableau ainsi que la longueur et la largeur définies
         
         noFill(); //Ne remplis pas les figures qui suivent
         rect(mot.x - 5, mot.y - 5, 100, 30); //Rectangle correspondant à la délimitation de la boîte de texte
@@ -82,20 +82,23 @@ function draw () {
 
 var word = null; //Variable globale initialement nulle
 
-//Fonction propre à p5.js, à chaque fois que la souris est appuyée dans la zone canvas, on applique cette fonction
+/*Fonction propre à p5.js, à chaque fois que la souris est appuyée dans la zone canvas, on applique cette fonction*/
 
 function mousePressed () {
     for (var i = 0; i < mots.length; i++) {
         var mot = mots[i];
         
-        if((mouseX > mot.x - 5) && (mouseY > mot.y - 5) && (mouseX < mot.x + 100) && (mouseY < mot.y + 30)){ //Si la souris est dans la boîte du mot
+        if((mouseX > mot.x - 5) && 
+           (mouseY > mot.y - 5) && 
+           (mouseX < mot.x + 100) && 
+           (mouseY < mot.y + 30)) { //Si la souris est dans la boîte du mot
           word = mot; //La variable globale word (nulle) est changée pour le mot correspondant à celui sur lequelle on clique
           break;
         }
     }
 }
 
-//Fonction propre à p5.js : appelée à chaque fois que l'on déplace la souris 
+/*Fonction propre à p5.js : appelée à chaque fois que l'on déplace la souris*/
 
 function mouseDragged () {
     if (word !== null) { //Si la variable n'est pas nulle, c'est à dire qu'on a cliqué sur un mot :
@@ -105,13 +108,13 @@ function mouseDragged () {
     }
 }
 
-//Fonction propre à p5.js : appelé quand on relâche la souris
+/*Fonction propre à p5.js : appelé quand on relâche la souris*/
 
 function mouseReleased () { 
     word = null;
 }
 
-//Fonction appelée lorsqu'on clique sur le bouton envoyer : teste la réponse, erreurs éventuelles de l'utilisateur
+/*Fonction appelée lorsqu'on clique sur le bouton envoyer : teste la réponse, erreurs éventuelles de l'utilisateur*/
 
 function sent () { 
     var testErreur = allInBox();
@@ -132,7 +135,7 @@ function sent () {
     }
 }
 
-//Fonction appelée par la fonction sent() 
+/*Fonction appelée par la fonction sent() : */
 
 function allInBox() { 
     var test = true;
@@ -165,19 +168,19 @@ function allInBox() {
     }
 }
 
-//Fonction 
+/*Fonction*/
 
 function inBox (x, y) {
     for (var j = 0; j < boxes.length; j++) {
         var box = boxes[j];
-        var result = [false];
+        var result = [false]; //Résultat à renvoyer
 
         if ((x - 5 > box.x) && 
             (y - 5 > box.y) && 
             (x + 95 < box.x + 110) && 
-            (y + 25 < box.y + 40)) {
-            result[0] = true;
-            result.push(j);
+            (y + 25 < box.y + 40)) { //Si la boîte de mot est dans la boîte de réponse
+            result[0] = true; //Le résultat à renvoyer est vérifié
+            result.push(j); //On rajoute le terme de la boîte de réponse dans le résultat à renvoyer
             break;
         }
     }
@@ -185,7 +188,7 @@ function inBox (x, y) {
     return result;
 }
 
-//Fonction 
+/*Fonction */
 
 function inOrder (ordre) {
     if ((ordre[0] == 5) && 
@@ -193,7 +196,7 @@ function inOrder (ordre) {
         (ordre[2] == 0) && 
         (ordre[3] == 2) && 
         (ordre[4] == 1) && 
-        (ordre[5] == 4)) {
+        (ordre[5] == 4)) { //Si l'ordre des mots soumlis par l'utilsateur est bon :
         return true;
     }
     else {

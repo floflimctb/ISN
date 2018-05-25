@@ -1,9 +1,10 @@
-body { /* Code pour le background */ 
+/*Background*/
+body {
     background-image: url('../images/images.png');
 }
 
-img:hover { /* Quand la souris est sur le boutton */ 
-    cursor: pointer; /* Le curseur devient une main */ 
+img:hover {
+    cursor: pointer;
 }
 
 img {
