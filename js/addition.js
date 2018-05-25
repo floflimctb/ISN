@@ -19,7 +19,7 @@ function changeDescription () { //Fonction ayant pour effet de changer le label 
 }
 
 function redirection () {
-	document.location.href = '../html/chemins.html'; //Redirige vers chemins.html
+	document.location.href = '../html/enigme.html'; //Redirige vers chemins.html
 }
 
 changeDescription(); //On appelle la fonction changeDescription
