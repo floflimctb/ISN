@@ -1,3 +1,5 @@
+/*Background*/
+
 body {
     margin: 0;
     font-family: Helvetica;
@@ -13,15 +15,17 @@ body {
     left: 0; 
 }
 
+/*Pour class="texte"*/
+
 .texte {
     text-align: center; 
-    position: relative; 
+    position: relative;
     background-color: rgba(255, 255, 255, 0.7); /* couleur blanche avec une opacité de 0.7 */ 
-    margin: 190px; /* marge extérieure : permet de centrer le cadre (il y a une marge de 190px à droite et à gauche */ 
+    margin: 190px; /* marge extérieure : permet de centrer le cadre (il y a une marge de 190px à droite et à gauche */
     margin-top: 10px; 
     margin-bottom: 0px; 
     width: auto; 
-    height: auto; 
+    height: auto;
     padding: 2px; /* marge intérieure */ 
 }
 
@@ -36,35 +40,31 @@ img {
     margin-right: auto;  
 }
 
-h1 { 
-    font-size: 30px; 
+h1, h2, h3, a, p {
     color: #5F4444; 
     font-family: Apple Chancery; 
-} 
+    font-variant: small-caps; 
+    font-weight: lighter ;
+}
 
-h2 { 
-    color: #5F4444; 
-    font-family: Apple Chancery; 
+h1 { 
+    font-size: 30px;
 }
 
 p { 
-    font-size: 20px; 
-    color: #5F4444; 
-    font-family: Apple Chancery; 
+    font-size: 20px;
 }
 
-.question button { /* Code pour le boutton */ 
+.question button { 
     width: 100%; 
     height: 700px; 
     opacity: 0; 
 } 
 
-.question button:hover { /* Quand la souris est sur le boutton */ 
-    cursor: pointer; /* Le curseur devient une main */ 
+.question button:hover {
+    cursor: pointer;
 }
 
 input {
-    background-color: ; 
-    color: ;  
     border-radius:50px;
 }
