@@ -115,9 +115,13 @@ function mouseReleased () {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 function redirection () {
     document.location.href = '../html/qcm.html'; 
 }
+=======
+/*Fonction appelée lorsqu'on clique sur le bouton envoyer : teste la réponse, erreurs éventuelles de l'utilisateur*/
+>>>>>>> 3ce0d400843814690c27743d0f67987617132176
 =======
 /*Fonction appelée lorsqu'on clique sur le bouton envoyer : teste la réponse, erreurs éventuelles de l'utilisateur*/
 >>>>>>> 3ce0d400843814690c27743d0f67987617132176

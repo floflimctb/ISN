@@ -1,5 +1,4 @@
-/*Background*/
-
+/* Background */
 body {
     margin: 0;
     font-family: Helvetica;
@@ -15,10 +14,10 @@ body {
     left: 0; 
 }
 
-/*Pour class="texte"*/
+/* Pour class="texte" */
 
 .texte {
-    text-align: center; 
+    text-align: center;
     position: relative;
     background-color: rgba(255, 255, 255, 0.7); /* couleur blanche avec une opacité de 0.7 */ 
     margin: 190px; /* marge extérieure : permet de centrer le cadre (il y a une marge de 190px à droite et à gauche */
@@ -26,7 +25,7 @@ body {
     margin-bottom: 0px; 
     width: auto; 
     height: auto;
-    padding: 2px; /* marge intérieure */ 
+    padding: 2px; /* marge intérieure */
 }
 
 img {

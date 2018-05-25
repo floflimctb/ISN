@@ -16,11 +16,15 @@ function changeDescription () {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 function redirection () {
 	document.location.href = '../html/enigme.html'; //Redirige vers chemins.html
 }
 
 changeDescription(); //On appelle la fonction changeDescription
+=======
+changeDescription();
+>>>>>>> 3ce0d400843814690c27743d0f67987617132176
 =======
 changeDescription();
 >>>>>>> 3ce0d400843814690c27743d0f67987617132176
