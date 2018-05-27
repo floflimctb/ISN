@@ -1,19 +1,22 @@
-function RedirectionJavascript() {
-	document.location.href = '../html/fin.html'; 
-}
+/* Fonction que l'on appellera pour tester le formulaire "choix" */ 
 
-function tester(choix)// une fonction que l'on appellera pour tester le formulaire
+function tester(choix) 
+
 {
- if (choix[1].checked)
+    
+ if (choix[1].checked) 
  { 
-    RedirectionJavascript();
-     
- }else if (choix[0].checked || choix[2].checked || choix[3].checked )
+    document.location.href = '../html/fin.html'; 
+ } 
+    else if (choix[0].checked || choix[2].checked || choix[3].checked )
  {
      alert("Mauvaise réponse");
-     
- }else {
+     
+ } 
+    else {
     alert("Le QCM est mal rempli");
  };
+    
  return false;
+    
 }
