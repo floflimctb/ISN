@@ -1,7 +1,7 @@
 body {
     margin: 0;
     background-size: cover;
-    overflow: hidden; /* Pour enlever le truc qui permet de faire descendre la page */
+    overflow: hidden; /* Pour enlever la barre de scroll */
     width: 100%; 
     height: 100%;
     background-position: bottom; /* Permet de voir le haut de l'image */ 
@@ -10,7 +10,8 @@ body {
     left: 0; 
 }
 
-.texte { /* Class pour le rectangle un peu transparent */ 
+/* Définit l'overlay pour les boîtes de dialogue des énigmes */
+.texte {
     text-align: center; 
     position: relative; 
     background-color: rgba(255, 255, 255, 0.7); 
@@ -33,54 +34,33 @@ img {
     margin-right: auto;  
 }
 
-h1 { 
-    font-size: 30px; 
+h1, h2, h3, a, p {
     color: #5F4444; 
     font-family: Apple Chancery; 
     font-variant: small-caps; 
     font-weight: lighter ;
+}
+
+h1 { 
+    font-size: 30px;
 } 
 
-h2 { 
-    color: #5F4444; 
-    font-family: Apple Chancery; 
-    font-variant: small-caps; 
-    font-weight: lighter ;
-
-}
-
-h3 {
-    color: #5F4444; 
-    font-family: Apple Chancery; 
-    font-variant: small-caps; 
-    font-weight: lighter ;
-}
-
-a { 
-    color: #5F4444; 
-    font-family: Apple Chancery; 
-    font-variant: small-caps; 
-    font-weight: lighter ;
-}
-
 p { 
-    font-size: 20px; 
-    color: #5F4444; 
-    font-family: Apple Chancery;    
-    font-variant: small-caps; 
-    font-weight: lighter ;
+    font-size: 20px;
 }
 
-.question button { /* Code pour le bouton de l'accueil */ 
+/* Bouton de l'accueil */ 
+.question button { 
     width: 100%; 
     height: 700px; 
     opacity: 0; 
 } 
 
-.question button:hover { /* Quand la souris est sur le bouton */ 
-    cursor: pointer; /* Le curseur devient une main */ 
+/* Quand la souris est sur le bouton */
+.question button:hover {  
+    cursor: pointer; /*Le curseur devient une main*/
 }
 
 input {
-    border-radius:50px;
+    border-radius: 50px;
 }

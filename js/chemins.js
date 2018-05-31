@@ -1,25 +1,8 @@
-document.onkeydown= function(key){ reactKey(key); } 
-
-/* Fonction pour rediriger à gauche */
-
-function redirectionLeft() { 
-	document.location.href = '../html/mots.html'; 
-}
-
-/* Fonction pour rediriger à droite */
-
-
-function redirectionRight() { 
-	document.location.href = '../html/images.html'; 
-}
-
-/* Fonction "lorsque la touche est appuyée faire" */
-
-function reactKey(evt) { 
-   if(evt.keyCode== 37) {
-      redirectionLeft()
-   }   
-    if(evt.keyCode== 39) {
-      redirectionRight()
-   }
-}
+document.onkeydown = function (evt) { //Lorsque l'utilisateur appuye sur une touche, on applique la fonction qui suit :
+    if (evt.keyCode== 37) { //Si l'utilisateur appuye sur la touche gauche du clavier
+        document.location.href = '../html/mots.html';
+    }   
+    if (evt.keyCode== 39) { //Touche droite
+      document.location.href = '../html/images.html';
+    } 
+};
