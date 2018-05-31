@@ -79,7 +79,10 @@ function mousePressed () {
     for (var i = 0; i < mots.length; i++) {
         var mot = mots[i]; //Question de practicité, cela évite de marquer mots[i] à chaque fois
         
-        if((mouseX > mot.x - 5) && (mouseY > mot.y - 5) && (mouseX < mot.x + 100) && (mouseY < mot.y + 30)){ //Si la souris est dans la boîte de texte
+        if((mouseX > mot.x - 5) && 
+        	(mouseY > mot.y - 5) && 
+        	(mouseX < mot.x + 100) && 
+        	(mouseY < mot.y + 30)) { //Si la souris est dans la boîte de texte
           word = mot; //La variable globale word correspond alors au mot sur lequel on clique
           break;
         }
@@ -104,7 +107,8 @@ function mouseReleased () {
 function sent () {
     var testErreur = allInBox(); /*Valeur renvoyée par la fonction allInBox() : tableau :
     -1ère valeur : booléen si tous les mots sont placés dans une boîte de réponse */
-    var ordre = testErreur[1]; //-2ème valeur : tableau correspondant à l'ordre de ces mots dans les boîtes de réponse que l'on place dans la variable ordre
+    var ordre = testErreur[1]; 
+    //-2ème valeur : tableau correspondant à l'ordre de ces mots dans les boîtes de réponse que l'on place dans la variable ordre
     
     if (testErreur[0] === true) { //Si tous les mots sont placés dans une boîte de réponse
         var result = inOrder(ordre); //Booléen renvoyé par la fonction inOrder() avec pour paramètre l'ordre
@@ -161,7 +165,10 @@ function inBox (x, y) {
         var box = boxes[j];
         var result = [false];
 
-        if ((x - 5 > box.x) && (y - 5 > box.y) && (x + 95 < box.x + 110) && (y + 25 < box.y + 40)) { //Si la boîte de mot est bien dans la boîte de réponse
+        if ((x - 5 > box.x) && 
+        	(y - 5 > box.y) && 
+       		(x + 95 < box.x + 110) && 
+        	(y + 25 < box.y + 40)) { //Si la boîte de mot est bien dans la boîte de réponse
             result[0] = true;
             result.push(j);
             break;
@@ -172,7 +179,12 @@ function inBox (x, y) {
 
 /* Teste l'ordre des mots */
 function inOrder (ordre) {
-    if ((ordre[0] == 5) && (ordre[1] == 3) && (ordre[2] == 0) && (ordre[3] == 2) && (ordre[4] == 1) && (ordre[5] == 4)) { //Si l'ordre des mtos attendu est respecté
+    if ((ordre[0] == 5) && 
+    	(ordre[1] == 3) && 
+    	(ordre[2] == 0) && 
+    	(ordre[3] == 2) && 
+    	(ordre[4] == 1) && 
+    	(ordre[5] == 4)) { //Si l'ordre des mtos attendu est respecté
         return true;
     }
     else {
