@@ -14,8 +14,10 @@ function changeDescription () {
 
 changeDescription();
 
-document.getElementById("form").addEventListener("submit", function () { //On écoute l'événement du formulaire ayant l'id "formPage1", quand on envoie le formulaire (appuye sur entrer), on applique la fonction qui suit :
-    var value = document.getElementById("result").value; //Résultat rentré par l'utilisateur : valeur rentrée dans l'élément html qui a pour id "result"
+document.getElementById("form").addEventListener("submit", function () { /*On écoute l'événement du formulaire ayant l'id "formPage1", 
+    quand on envoie le formulaire (appuye sur entrer), on applique la fonction qui suit :*/
+    var value = document.getElementById("result").value; /*Résultat rentré par l'utilisateur : valeur rentrée dans l'élément html 
+    qui a pour id "result"*/
     var result = numbers[0] + numbers[1]; //Résultat attendu, c'est à dire à l'addition des deux chiffres 
     
     if (value == result) { //Si le résultat rentré par l'utilisateur correspond à la valeur attendue :
